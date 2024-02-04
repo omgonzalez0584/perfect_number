@@ -21,10 +21,21 @@ def divisors(number):
 
     return result
 
+print("Determine if a number is perfect, abundant, or deficient")
+while True:
+    try:
+        number = (input("Enter a number - (X for exit): "))
+        if number.lower() == 'x':
+            print("Good bye!")
+            break
+        else:
+            result = divisors(int(number))
+            print(f'{number} is a {result}')
+    except Exception as e:
+        print('Error , debe ingresar un numero!')
 
-number = int(input("Enter a number: "))
-result = divisors(number)
-print(f'{number} is a {result}')
+
+        
 
 
 
